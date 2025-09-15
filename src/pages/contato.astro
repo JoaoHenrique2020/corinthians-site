@@ -3,44 +3,44 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Contato - Corinthians">
-  <section style="text-align:center; padding: 60px;">
-    <h1 style="font-size: 2.5rem; color: black;">Entre em Contato</h1>
-    <p style="font-size: 1.1rem; color: #333;">Preencha o formulário abaixo:</p>
+  <section style="text-align:center; padding:40px;">
+    <h2>Contato</h2>
+    <p>Entre em contato com a Nação Corinthiana.</p>
 
-    <form method="post" style="max-width:500px; margin:40px auto; text-align:left; display:flex; flex-direction:column; gap:15px;">
-      <label>Nome:
-        <input type="text" name="nome" placeholder="Digite seu nome" required minlength="3"/>
-      </label>
-      
-      <label>Email:
-        <input type="email" name="email" placeholder="Digite seu email" required/>
-      </label>
+    <form style="max-width:500px; margin:0 auto; text-align:left;">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
 
-      <label>Telefone:
-        <input type="tel" name="telefone" placeholder="(11) 99999-9999" pattern="^\(\d{2}\)\s\d{5}-\d{4}$" required/>
-      </label>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required />
 
-      <label>Assunto:
-        <select name="assunto" required>
-          <option value="">Selecione</option>
-          <option value="ingressos">Ingressos</option>
-          <option value="produtos">Produtos Oficiais</option>
-          <option value="outros">Outros</option>
-        </select>
-      </label>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" />
 
-      <label>
-        <input type="checkbox" required/> Aceito receber novidades do Corinthians
-      </label>
+      <label for="assunto">Assunto:</label>
+      <select id="assunto" name="assunto" required>
+        <option value="">Selecione...</option>
+        <option value="duvida">Dúvida</option>
+        <option value="elogio">Elogio</option>
+        <option value="reclamacao">Reclamação</option>
+      </select>
 
-      <label>Mensagem:
-        <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
-      </label>
+      <fieldset>
+        <legend>Preferência de contato:</legend>
+        <label><input type="radio" name="preferencia" value="email" required /> E-mail</label>
+        <label><input type="radio" name="preferencia" value="telefone" /> Telefone</label>
+      </fieldset>
 
-      <div style="display:flex; gap:10px;">
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+
+      <label><input type="checkbox" required /> Aceito os termos de uso</label>
+
+      <div style="margin-top:20px;">
         <button type="submit">Enviar</button>
         <button type="reset">Limpar</button>
       </div>
     </form>
   </section>
 </Layout>
+
