@@ -4,8 +4,33 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Galeria - Corinthians">
   <section style="text-align:center; padding:40px;">
-    <h2>Galeria</h2>
-    <p>Momentos históricos, conquistas e a força da Fiel Torcida.</p>
-    <!-- Depois podemos colocar imagens aqui -->
+    <h2 style="color:white; font-size:2rem;">Galeria de Títulos</h2>
+    <p style="color:#ccc; margin-bottom:30px;">
+      O Corinthians tem uma história gloriosa repleta de títulos que marcaram o futebol mundial.
+    </p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:1000px; margin:0 auto;">
+      
+      <!-- MUNDIAL -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1591733070876-56a2f50a061d?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60" 
+             alt="Mundial de Clubes 2000" 
+             style="width:100%; border-radius:8px;" />
+        <figcaption style="margin-top:10px; color:#ccc; font-size:1rem;">
+          🏆 Mundial de Clubes da FIFA 2000 — O primeiro título mundial reconhecido pela FIFA, vencido em cima do Vasco.
+        </figcaption>
+      </figure>
+
+      <!-- LIBERTADORES -->
+      <figure>
+        <img src="https://images.unsplash.com/photo-1591733088535-ecdf3c299c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60" 
+             alt="Libertadores 2012" 
+             style="width:100%; border-radius:8px;" />
+        <figcaption style="margin-top:10px; color:#ccc; font-size:1rem;">
+          🏆 Copa Libertadores da América 2012 — Conquista histórica e invicta, vencendo o Boca Juniors na final.
+        </figcaption>
+      </figure>
+
+    </div>
   </section>
 </Layout>
