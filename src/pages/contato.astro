@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contato - Corinthians">
+  <section style="text-align:center; padding: 60px;">
+    <h1 style="font-size: 2.5rem; color: black;">Entre em Contato</h1>
+    <p style="font-size: 1.1rem; color: #333;">Preencha o formulário abaixo:</p>
+
+    <form method="post" style="max-width:500px; margin:40px auto; text-align:left; display:flex; flex-direction:column; gap:15px;">
+      <label>Nome:
+        <input type="text" name="nome" placeholder="Digite seu nome" required minlength="3"/>
+      </label>
+      
+      <label>Email:
+        <input type="email" name="email" placeholder="Digite seu email" required/>
+      </label>
+
+      <label>Telefone:
+        <input type="tel" name="telefone" placeholder="(11) 99999-9999" pattern="^\(\d{2}\)\s\d{5}-\d{4}$" required/>
+      </label>
+
+      <label>Assunto:
+        <select name="assunto" required>
+          <option value="">Selecione</option>
+          <option value="ingressos">Ingressos</option>
+          <option value="produtos">Produtos Oficiais</option>
+          <option value="outros">Outros</option>
+        </select>
+      </label>
+
+      <label>
+        <input type="checkbox" required/> Aceito receber novidades do Corinthians
+      </label>
+
+      <label>Mensagem:
+        <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+      </label>
+
+      <div style="display:flex; gap:10px;">
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+  </section>
+</Layout>
