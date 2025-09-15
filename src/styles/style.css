@@ -1,4 +1,79 @@
-/* Estilo Externo Global */
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: black;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+/* Seções */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+/* Formulário de Contato */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form select, form textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: gray;
+}
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
